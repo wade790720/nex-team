@@ -142,7 +142,7 @@ function RunningClock(): JSX.Element {
           type="number"
           value={minutes}
           onChange={(e) => setMinutes(Number(e.target.value) || 0)}
-          disabled={isInputDisabled}
+          // disabled={isInputDisabled} // 有加體驗比較好
         />
         Minutes
       </label>
@@ -151,7 +151,7 @@ function RunningClock(): JSX.Element {
           type="number"
           value={seconds}
           onChange={(e) => setSeconds(Number(e.target.value) || 0)}
-          disabled={isInputDisabled}
+          // disabled={isInputDisabled} // 有加體驗比較好
         />
         Seconds
       </label>
