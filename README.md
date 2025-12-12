@@ -1,4 +1,4 @@
-# Nex Team 專案
+# NexTeam 專案
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -106,7 +106,7 @@ import RunningClock from './components/RunningClock';
 **位置**: `src/utils/IsCycle.ts`
 
 **題目說明**:
-判斷一個有向圖是否為單一環（cycle）。單一環的定義是：可以從某一點出發，走訪所有其他節點一次，最後回到起點。
+判斷一個有向圖是否為單一環（cycle）；單一環的定義是：可以從某一點出發，走訪所有其他節點一次，最後回到起點。
 
 **輸入**:
 - `A`: 起點陣列，`A[K]` 表示第 K 條邊的起點
