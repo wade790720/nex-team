@@ -16,7 +16,7 @@ function RunningClock(): JSX.Element {
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const [initialTime, setInitialTime] = useState<number>(0); // 記錄初始時間，用於重新開始
-  const [isInputDisabled, setIsInputDisabled] = useState<boolean>(false); // 控制 input 是否 disabled
+  // const [isInputDisabled, setIsInputDisabled] = useState<boolean>(false); // 控制 input 是否 disabled
   
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const displayTimeRef = useRef<number>(0);
@@ -98,7 +98,7 @@ function RunningClock(): JSX.Element {
     setDisplayTime(totalSeconds);
     setIsRunning(true);
     setIsPaused(false);
-    setIsInputDisabled(true); // 按下 START 時，disabled input
+    // setIsInputDisabled(true); // 按下 START 時，disabled input
   };
 
   /**
@@ -132,7 +132,7 @@ function RunningClock(): JSX.Element {
     setIsRunning(false);
     setIsPaused(false);
     setInitialTime(0);
-    setIsInputDisabled(false); // 按下 RESET 時，重新啟用 input
+    // setIsInputDisabled(false); // 按下 RESET 時，重新啟用 input
   };
 
   return (
