@@ -40,7 +40,7 @@ function RunningClock(): JSX.Element {
     }
   };
 
-  // 同步 displayTimeRef
+
   useEffect(() => {
     displayTimeRef.current = displayTime;
   }, [displayTime]);
@@ -58,7 +58,6 @@ function RunningClock(): JSX.Element {
       intervalRef.current = setInterval(() => {
         setDisplayTime((prev) => {
           if (prev <= 1) {
-            // 倒數結束
             setIsRunning(false);
             setIsPaused(false);
             return 0;
@@ -68,7 +67,6 @@ function RunningClock(): JSX.Element {
       }, 1000);
     }
 
-    // 清理函數
     return () => {
       clearTimer();
     };
@@ -110,11 +108,9 @@ function RunningClock(): JSX.Element {
     }
 
     if (isPaused) {
-      // 恢復
       setIsPaused(false);
       setIsRunning(true);
     } else {
-      // 暫停
       setIsPaused(true);
       setIsRunning(false);
     }

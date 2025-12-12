@@ -18,9 +18,7 @@ function LikeDislike(): JSX.Element {
   const [liked, setLiked] = React.useState<boolean>(false);
   const [disliked, setDisliked] = React.useState<boolean>(false);
 
-  /**
-   * 切換 Like 狀態：切換當前狀態，並取消對立的 Dislike（如果存在）
-   */
+
   const handleLike = useCallback((): void => {
     const willBeLiked = !liked;
     
@@ -34,9 +32,7 @@ function LikeDislike(): JSX.Element {
     }
   }, [liked, disliked]);
 
-  /**
-   * 切換 Dislike 狀態：切換當前狀態，並取消對立的 Like（如果存在）
-   */
+
   const handleDislike = useCallback((): void => {
     const willBeDisliked = !disliked;
     
